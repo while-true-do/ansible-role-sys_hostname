@@ -1,0 +1,5 @@
+---
+# defaults file for while_true_do.sys_hostname
+
+## Host Management
+wtd_sys_hostname: "" # defaults to inventory_hostname

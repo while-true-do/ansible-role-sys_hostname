@@ -1,0 +1,13 @@
+---
+# tasks file for while_true_do.sys_hostname
+
+- name: Manage hostname
+  hostname:
+    name: "{{ wtd_sys_hostname|default(inventory_hostname) }}"
+  become: true
+  when:
+    - ansible_virtualization_type != "docker"
+  tags:
+    - hostname
+    - system
+    - configuration
