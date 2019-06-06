@@ -2,8 +2,10 @@
 - name: Converge
   hosts: all
   pre_tasks:
-    - package:
+    - name: Install dependencies for testing
+      package:
         name: "hostname"
+        state: "present"
       become: true
   roles:
     - role: while_true_do.sys_hostname
