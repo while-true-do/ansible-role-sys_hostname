@@ -3,4 +3,4 @@
 
 ## Host Management
 # defaults to inventory_hostname
-wtd_sys_hostname: ""
+# wtd_sys_hostname: ""
