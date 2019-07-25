@@ -7,7 +7,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_hostname(host):
-    cmd = host.run("hostname -f")
+    cmd = host.check_output("hostname -f")
     ihost = host.ansible.get_variables()["inventory_hostname"]
 
-    assert cmd.stdout == ihost
+    assert cmd == ihost
